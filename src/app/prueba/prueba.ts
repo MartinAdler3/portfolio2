@@ -7,5 +7,7 @@ import { Component, input } from '@angular/core';
   styleUrl: './prueba.scss',
 })
 export class Prueba {
-  value = input(0);
+  desc = input<string>();
+  titulo = input<string>();
+  img = input();
 }
