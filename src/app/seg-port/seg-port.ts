@@ -15,7 +15,7 @@ title = "Martin Uriel Adler"
     {
       name: "Statill",
       imagen: "assets/images/projects/statill.png",
-      description: "En Statill, una aplicación para la gestión de pequeños comercios, mi rol fue de Front End, encargandome de la conexión del back con la página",
+      description: "En Statill, una aplicación para la gestión de pequeños comercios, mi rol fue de Front End, encargandome de la conexión del back",
     },
     {
       name: "Apocaliptic",
