@@ -1,1 +1,103 @@
-<p>seg-port works!</p>
+<div class="portfolio-container">
+  <!-- HEADER -->
+  <div class="header">
+    <h1 class="header-title">{{ title }}</h1>
+    <p class="header-subtitle">{{ subtitle }}</p>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-content">
+    <!-- QUIÉN SOY YO -->
+    <div class="about-section">
+      <div class="about-content">
+        <div class="about-image">
+          <!-- Using profileImage property -->
+          <img [src]="profileImage" alt="Perfil" class="image-placeholder">
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">Quién soy yo?</h2>
+          <p>
+            Mi nombre es Martin Uriel Adler, nací en enero de 2008 en Buenos Aires. Desde chico siempre quize
+            entender como funcionan las cosas, en particular como funcionan los grandes sistemas, las ciudades, las
+            grandes construcciones civil en la UBA.
+          </p>
+          <p>
+            De todos modeistas grandes construcciones no son mi única pasion, tambien amo todo lo relacionado a la
+            tecnologia, es por esto que hice un bachiller tecnologico en el que diseñe y programe en tres proyectos
+            distintos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTOS Y LENGUAJES -->
+    <div class="projects-languages-grid">
+      <!-- MIS PROYECTOS -->
+      <div class="projects-section">
+        <h2 class="section-title">Mis proyectos</h2>
+        <div class="projects-grid">
+          <div *ngFor="let project of projects" [ngClass]="{'project-full': project.name === 'We-Play'}" class="project-card">
+            <!-- Using project.imagen property -->
+            <img [src]="project.imagen" alt="{{ project.name }}" class="project-image">
+            <h3>{{ project.name }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LENGUAJES QUE DOMINO -->
+      <div class="languages-section">
+        <h2 class="section-title">Lenguajes que domino</h2>
+        <div class="languages-grid">
+          <div *ngFor="let lang of languages" class="language-card">
+            <!-- Using lang.imagen property -->
+            <img [src]="lang.imagen" alt="{{ lang.name }}" class="language-image">
+            <h3>{{ lang.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HABILIDADES BLANDAS -->
+    <div class="soft-skills-section">
+      <h2 class="section-title">Habilidades blandas</h2>
+      <div class="soft-skills-grid">
+        <div class="soft-skills-column">
+          <p *ngFor="let skill of softSkills.left">{{ skill }}</p>
+        </div>
+        <div class="soft-skills-column">
+          <p *ngFor="let skill of softSkills.right">{{ skill }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTAME Y FORMACION -->
+    <div class="contact-education-grid">
+      <!-- CONTACTAME -->
+      <div class="contact-section">
+        <h2 class="section-title">Contactame</h2>
+        <div class="contact-grid">
+          <div *ngFor="let channel of contactChannels" class="contact-card">
+            <!-- Using channel.imagen property -->
+            <img [src]="channel.imagen" alt="{{ channel.name }}" class="contact-icon">
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMACION -->
+      <div class="education-section">
+        <h2 class="section-title">Formacion</h2>
+        <div class="education-list">
+          <div *ngFor="let edu of education" class="education-item">
+            <!-- Using edu.imagen property -->
+            <img [src]="edu.imagen" alt="{{ edu.name }}" class="education-icon">
+            <div class="education-text">
+              <h3>{{ edu.name }}({{ edu.period }})</h3>
+              <p>{{ edu.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
